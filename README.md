@@ -54,13 +54,14 @@ public class GraphGatewayApplication {
 
 ![图片](https://github.com/mathlpz/graph-gateway/blob/master/docs/interface-intro.png)
 
-项目启动后，用户可通过访问地址 URL(http://localhost:8778/swagger-ui/index.html) 调试。
+
+项目启动后，开发者用户可通过访问 URL(http://localhost:8778/swagger-ui/index.html) 调试接口，熟悉功能。
 
 
 ## 写在最后
-由于本框架是由自己一人开发和维护，有些不完善的地方希望大家多提宝贵意见修改。
+由于本框架是由本人一人开发维护，有不完善的地方希望多提宝贵意见修改。
 <br/>
-大家可以下载源码在本地根据自己的需要编写修改，同时也希望有更多的朋友能够参与其中一起开发完善框架。
+大家可以下载源码到本地根据自己的需求编写修改，同时也希望有更多的朋友能够参与其中一起开发完善框架。
 
 ## License
 该系统遵循开源协议 [Apache License, Version 2.0, January 2004](https://www.apache.org/licenses/LICENSE-2.0).
