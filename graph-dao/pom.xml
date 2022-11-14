@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>graph-gateway</artifactId>
+        <groupId>com.lpz.graph</groupId>
+        <version>${graph-client.version}</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.lpz.graph</groupId>
+    <artifactId>graph-dao</artifactId>
+    <version>${graph-client.version}</version>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>com.lpz.graph</groupId>
+            <artifactId>graph-common</artifactId>
+            <version>${graph-client.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.baomidou</groupId>
+                    <artifactId>mybatis-plus-annotation</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.baomidou</groupId>
+                    <artifactId>mybatis-plus-core</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- mybatis-plus begin -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatis-plus-boot-starter.version}</version>
+        </dependency>
+        <!--<dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>${mybatis-plus-boot-starter.version}</version>
+        </dependency>-->
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+            <version>${velocity.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+        <!-- mybatis-plus end -->
+
+        <!-- 引入Druid依赖 -->
+        <!--<dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+        </dependency>-->
+
+        <!-- appollo config center -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>1.8.13</version>
+        </dependency>
+        <!-- impala end -->
+    </dependencies>
+</project>

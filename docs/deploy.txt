@@ -1,0 +1,6 @@
+#打包命令
+mvn clean package -P local/dev/prod
+cd target
+tar -zxvf graph-web-1.0.0.RELEASE-local.tar.gz
+cd graph
+sh bin/startup.sh

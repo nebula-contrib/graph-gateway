@@ -1,0 +1,31 @@
+--
+导入示例数据库：basketballplayer
+
+-- 创建索引示例
+CREATE TAG INDEX IF NOT EXISTS index_player_name on player(name(32));
+REBUILD TAG INDEX index_player_name;
+--
+SHOW TAG INDEX STATUS;
+SHOW JOB 31;
+
+--
+基于索引的 LOOKUP 和 MATCH 示例。确保 LOOKUP 或 MATCH 有一个索引可用。如果没有，请先创建索引。
+
+--
+REBUILD TAG INDEX index_player_name;
+REBUILD TAG INDEX index_team_name;
+REBUILD TAG INDEX index_actor_name;
+REBUILD TAG INDEX index_director_name;
+REBUILD TAG INDEX index_area_name;
+REBUILD TAG INDEX index_video_name;
+REBUILD TAG INDEX index_writer_name;
+
+REBUILD TAG INDEX index_user_isKey;
+REBUILD TAG INDEX index_group_vnetName;
+REBUILD TAG INDEX index_user_memberId;
+
+
+REBUILD TAG INDEX index_forum_title;
+REBUILD TAG INDEX index_comment_ip;
+
+CREATE TAG INDEX player_index_name ON player(name(32));

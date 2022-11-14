@@ -1,0 +1,122 @@
+# spring-boot-plus Common Config
+
+############################# 访问路径、端口tomcat start ############################
+server:
+  port: 8778
+  servlet:
+    context-path: /
+  tomcat:
+    uri-encoding: UTF-8
+    threads:
+      max: 1000
+      min-spare: 30
+############################# 访问路径、端口tomcat end ##############################
+
+
+################################ spring config start ###############################
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  application:
+    name: spring-boot-plus
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  jackson:
+    date-format: yyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  resources:
+    static-locations: classpath:/resources/static/
+  favicon:
+    enabled: false
+
+# 当前项目maven激活环境，例如：local/dev/test/prod，对应pom.xml中profile设置值
+---
+spring:
+  profiles:
+    active: local
+
+################################ spring config end ################################
+
+
+############################## spring-boot-plus start #############################
+spring-boot-plus:
+  # jwt配置
+  jwt:
+    header: token
+    secret: 666666
+    issuer: spring-boot-plus
+    subject: spring-boot-plus-jwt
+    audience: web
+    expire-minutes: 2
+  # 拦截器配置
+  interceptor-config:
+    jwt-config:
+      exclude-path: /swagger-resources/**,/v2/api-docs/**,/resource/**,/login
+    permission-config:
+      exclude-path: /swagger-resources/**,/v2/api-docs/**,/webjars/**,/resource/**,/static/**,/favicon.ico,/swagger-ui.html,/index.html,/api/db/**
+    token-timeout-config:
+      exclude-path: /swagger-resources/**,/v2/api-docs/**,/resource/**,/index.html
+    resource-config:
+      include-path: ${spring-boot-plus.resource-access-patterns}
+  # 文件上传下载配置
+  upload-path: /opt/upload/
+  # 资源访问路径
+  resource-access-path: classpath:/static/
+  # 资源访问路径匹配：/resource/**
+  resource-access-patterns: ${spring-boot-plus.resource-access-path}**
+  # 资源访问全路径前缀：http://localhost:8778/resource/
+  resource-access-url: http://localhost:${server.port}${server.servlet.context-path}${spring-boot-plus.resource-access-path}
+############################### spring-boot-plus end ###############################
+
+
+############################### mybatis-plus start #################################
+mybatis-plus:
+  check-config-location: true
+  configuration:
+    map-underscore-to-camel-case: true
+    #    控制台打印sql日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: id_worker
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+    banner: false
+  mapper-locations: classpath*:system/*Mapper.xml
+################################ mybatis-plus end #################################
+
+#################################### Swagger start ####################################
+# swagger配置
+swagger:
+  base:
+    package: com.lpz.graph.gateway
+  contact:
+    email: mathlpz@126.com
+    name: mathlpz
+    url: ''
+  description: ''
+  title: graph-gateway
+  url: ''
+  version: 1.0
+#################################### Swagger end #####################################
+
+# tag展示字段名称-配置， 示例：spaceName.tagName: displayName
+# space初始化标签选择-配置， 示例：spaceName: tagName
+display-name:
+  spaceName:
+    tagNames:
+      basketballplayer.player: name
+      basketballplayer.team: name
+    # 初始化时展示的标签
+    tagVertex:
+      basketballplayer: player
+      content: actor
+      mytest_ldbc1: Person
+
+
+
+
