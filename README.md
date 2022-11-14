@@ -54,7 +54,7 @@ public class GraphGatewayApplication {
 ![图片](https://github.com/mathlpz/graph-gateway/blob/master/docs/interface-intro.png)
 
 
-项目启动后，开发者用户可通过访问 URL(http://localhost:8778/swagger-ui/index.html) 调试接口，熟悉功能。
+项目启动后，开发者用户可通过访问服务器地址，如 URL(http://localhost:8778/swagger-ui/index.html) 调试接口，熟悉功能。
 
 
 ## 写在最后
