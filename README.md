@@ -47,12 +47,12 @@ public class GraphGatewayApplication {
 <br/>
 项目采用经典的 MVC 框架模式搭建，代码结构如下：
 
-![图片](https://github.com/mathlpz/graph-gateway/blob/master/docs/mvc-framework.jpg)
+![图片](https://github.com/mathlpz/graph-gateway/blob/master/docs/mvc-framework.png)
 
 <br/>
 已完成图数据库访问的多个基础接口开发列表：
 
-![图片](https://github.com/mathlpz/graph-gateway/blob/master/docs/interface-intro.jpg)
+![图片](https://github.com/mathlpz/graph-gateway/blob/master/docs/interface-intro.png)
 
 项目启动后，用户可通过访问地址 URL(http://localhost:8778/swagger-ui/index.html) 调试。
 
