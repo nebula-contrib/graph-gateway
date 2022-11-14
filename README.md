@@ -56,6 +56,15 @@ public class GraphGatewayApplication {
 
 项目启动后，开发者用户可通过访问服务器地址，如 URL(http://localhost:8778/swagger-ui/index.html) 调试接口，熟悉功能。
 
+## 版本说明
+graph-gateway 目前版本是基于 [nebula-java](https://github.com/vesoft-inc/nebula-java) v2.6.2版本开发调试的，如果需要对接其他版本，可直接升级pom文件中 nebula-java 相应的版本号来开发：
+```xml
+    <properties>
+        <graph-client.version>2.6.2</graph-client.version>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+```
 
 ## 写在最后
 由于该框架是由本人一人开发维护，有不完善的地方希望多提宝贵意见修改。
