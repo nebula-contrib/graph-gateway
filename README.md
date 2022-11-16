@@ -51,6 +51,15 @@ public class GraphGatewayApplication {
 <br/>
 已完成图数据库访问的多个基础接口开发，并集成 Swagger 组件通过 Restful 风格展示 API 文档列表：
 
+| 接口名称       | 接口地址              | 请求    | 接口说明                | 
+|---------------|-----------------------|--------|-------------------------|
+| connect       | /api/db/connect       | POST   | 数据库连接               |
+| exec          | /api/db/exec          | POST   | 数据库nGql执行           |
+| disconnect    | /api/db/disconnect    | POST   | 数据库断开连接           |
+| initializeGql | /api/db/initializeGql | POST   | 随机查询N个节点子图数据   |
+| neighborhood  | /api/db/neighborhood  | POST   | 查询多个节点共同邻居      |
+| displayNames  | /api/db/displayNames  | POST   | 获取tag自定义展示名称     |
+
 ![图片](https://github.com/mathlpz/graph-gateway/blob/master/docs/interface-intro.png)
 
 
