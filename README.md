@@ -44,12 +44,12 @@ public class GraphGatewayApplication {
 ```
 
 ## 代码结构介绍
-项目采用经典的 MVC 框架模式搭建，代码结构如下：
+该项目采用经典的 MVC 框架模式搭建，代码结构简洁明了：
 
 ![图片](https://github.com/mathlpz/graph-gateway/blob/master/docs/mvc-framework.png)
 
 ## 接口说明
-已完成图数据库访问的多个基础接口开发，并集成 Swagger 组件通过 Restful 风格展示 API 文档列表：
+graph-gateway 已完成对接图数据库访问的多个基础接口开发，并集成 Swagger 组件通过 Restful 风格展示 API 文档列表：
 
 | 接口名称       | 接口地址              | 请求    | 接口说明                | 
 |---------------|-----------------------|--------|-------------------------|
@@ -75,7 +75,7 @@ graph-gateway 目前版本是基于 [nebula-java](https://github.com/vesoft-inc/
 ```
 
 ## 写在最后
-由于该框架是由本人一人开发维护，有不完善的地方希望多提宝贵意见修改。大家可以下载源码到本地根据自己的需求编写修改，同时也希望有更多的朋友能够参与其中一起开发完善。
+由于该框架是由本人独自开发维护，有不完善的地方希望多提宝贵意见修改。大家可以下载源码后根据自己的需求编写修改，同时也希望有更多的朋友能够参与其中一起开发完善。
 
 ## License
 该系统遵循开源协议 [Apache License, Version 2.0, January 2004](https://www.apache.org/licenses/LICENSE-2.0).
