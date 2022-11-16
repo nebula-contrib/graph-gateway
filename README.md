@@ -1,6 +1,6 @@
 # graph-gateway
 ## 框架描述
-graph-gateway 是一套基于Java语言开发的后端服务系统，使用轻量级开源框架 Springboot 基于 [nebula-java](https://github.com/vesoft-inc/nebula-java) 组件封装搭建的一个服务系统。
+graph-gateway 是一套基于Java语言开发的后端服务系统，使用轻量级开源框架 Springboot 基于 [nebula-java](https://github.com/vesoft-inc/nebula-java) 组件封装搭建的一套服务系统。
 gateway 意为大门，对于熟悉Java编程语言的朋友，可以通过使用 graph-gateway 作为入口实现自己服务系统的基础框架搭建，快速开发一个基于 [NebulaGraph](https://github.com/vesoft-inc/nebula) 的定制化图可视化平台，像对接关系型数据库一样玩转 Nebula 图数据库。
 
 ## 项目要求
@@ -44,11 +44,13 @@ public class GraphGatewayApplication {
 ```
 
 <br/>
+## 架构介绍
 项目采用经典的 MVC 框架模式搭建，代码结构如下：
 
 ![图片](https://github.com/mathlpz/graph-gateway/blob/master/docs/mvc-framework.png)
 
 <br/>
+## 接口说明
 已完成图数据库访问的多个基础接口开发，并集成 Swagger 组件通过 Restful 风格展示 API 文档列表：
 
 | 接口名称       | 接口地址              | 请求    | 接口说明                | 
@@ -61,7 +63,6 @@ public class GraphGatewayApplication {
 | displayNames  | /api/db/displayNames  | POST   | 获取tag自定义展示名称     |
 
 ![图片](https://github.com/mathlpz/graph-gateway/blob/master/docs/interface-intro.png)
-
 
 项目启动后，开发者用户可通过访问服务器地址，如 URL(http://localhost:8778/swagger-ui/index.html) 调试接口，熟悉功能。
 
