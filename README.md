@@ -43,7 +43,7 @@ public class GraphGatewayApplication {
 }
 ```
 
-## 代码结构介绍
+## 框架介绍
 该项目采用经典的 MVC 框架模式搭建，代码结构简洁明了：
 
 ![图片](https://github.com/mathlpz/graph-gateway/blob/master/docs/mvc-framework.png)
