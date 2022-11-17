@@ -49,7 +49,7 @@ public class GraphGatewayApplication {
 ![图片](https://github.com/mathlpz/graph-gateway/blob/master/docs/mvc-framework.png)
 
 ## 接口说明
-graph-gateway 已完成对接图数据库访问的多个基础接口开发，并集成 Swagger 组件通过 Restful 风格展示 API 文档列表：
+graph-gateway 已完成对接 Nebula 图数据库访问的多个基础接口开发，并集成 Swagger 组件通过 Restful 风格展示 API 文档列表：
 
 | 接口名称       | 接口地址              | 请求方式  | 接口说明                | 
 |---------------|-----------------------|----------|-------------------------|
